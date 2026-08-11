@@ -1,0 +1,23 @@
+services:
+
+  airflow-worker:
+    volumes:
+      - ../:/opt/airflow/project
+
+    environment:
+      DB_DRIVER: "${MSSQL_DRIVER}"
+      DB_SERVER: "${MSSQL_SERVER}"
+      DB_DATABASE: "${MSSQL_DATABASE}"
+      DB_USER: "${MSSQL_USER}"
+      DB_PASSWORD: "${MSSQL_PASSWORD}"
+      DB_TRUST_SERVER_CERTIFICATE: "yes"
+
+
+  airflow-scheduler:
+    volumes:
+      - ../:/opt/airflow/project
+
+
+  airflow-dag-processor:
+    volumes:
+      - ../:/opt/airflow/project

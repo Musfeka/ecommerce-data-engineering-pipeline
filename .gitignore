@@ -1,0 +1,36 @@
+# Secrets
+.env
+airflow/.env
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Logs
+logs/
+*.log
+airflow/logs/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Raw / generated data
+data/raw/olist/
+data/raw/exchange_rates/
+data/processed/
+data/rejected/
+
+# Spark
+spark-warehouse/
+
+# Airflow generated / temporary files
+airflow/config/
+airflow/docker-compose-broken.yaml
+airflow/docker-compose.backup.yaml
+airflow/dags/ecommerce_pipeline_test.py
+airflow/dags/ecommerce_pipeline_test.py
